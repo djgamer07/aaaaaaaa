@@ -1,4 +1,3 @@
-// src/App.js
 import "./App.css";
 import Cabecalho from "./cabecalho";
 import Nav from "./nav";
@@ -6,8 +5,11 @@ import Tabela from "./tabela";
 import Slideshow from "./slideshow";
 import Footer from "./footer";
 import ListaMusicos from "./listamusicos";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
   return (
     <div className="app-container">
       <Cabecalho />
@@ -23,7 +25,24 @@ function App() {
           <Tabela />
           <Slideshow />
           <h2>Conheça os nossos músicos</h2>
-          <ListaMusicos /> 
+          <ListaMusicos />
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <button
+              onClick={() => navigate("/formvoluntario")}
+              style={{
+                padding: '1rem 2rem',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: 'bold'
+              }}
+            >
+              Tornar-me Voluntário
+            </button>
+          </div>
         </div>
       </main>
       <Footer />
