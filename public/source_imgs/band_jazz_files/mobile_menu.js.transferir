@@ -1,0 +1,76 @@
+var startedSpinner = false;
+
+function showSubMenu(el, menuId){
+    var root = $(el).attr("data-root-id");
+    var path = $(el).attr("data-path");
+    jsRoutesFO.controllers.ApplicationController.getSubmenu(menuId, root, path).ajax()
+    .done(function(data){
+        $("#submenu-nav-1").hide();
+        $("#submenu-nav-2").hide();
+        $("#" + root).show();
+        $("#" + root).html(data);
+    });
+}
+
+function showSubsection(el, sectionId){
+    var root = $(el).attr("data-root-id");
+    var path = $(el).attr("data-path");
+    jsRoutesFO.controllers.ApplicationController.getSubsections(sectionId, root, path).ajax()
+    .done(function(data){
+        $("#submenu-nav-1").hide();
+        $("#submenu-nav-2").hide();
+        $("#" + root).show();
+        $("#" + root).html(data);
+    });
+}
+
+function goBack(root, path){
+    var pathLevels = path.split(";");
+    var lastLevel = pathLevels[pathLevels.length - 2];
+    if(lastLevel === "#"){
+        jsRoutesFO.controllers.ApplicationController.getSubmenuNav1().ajax()
+        .done(function(data){
+            $("#submenu-nav-1").html(data);
+        });
+        jsRoutesFO.controllers.ApplicationController.getSubmenuNav2().ajax()
+        .done(function(data){
+            $("#submenu-nav-2").html(data);
+        });
+        $("#submenu-nav-1").show();
+        $("#submenu-nav-2").show();
+    }else{
+        var ancestorType = lastLevel.split(",")[0];
+        var ancestorId = lastLevel.split(",")[1];
+        pathLevels.pop();
+        pathLevels.pop();
+        var newPath = pathLevels.join(";");
+        if(ancestorType === "MENU"){
+            jsRoutesFO.controllers.ApplicationController.getSubmenu(ancestorId, root, newPath).ajax()
+            .done(function(data){
+                $("#submenu-nav-1").hide();
+                $("#submenu-nav-2").hide();
+                $("#" + root).show();
+                $("#" + root).html(data);
+            });
+        }else{//ancestorType === "SECTION"
+            jsRoutesFO.controllers.ApplicationController.getSubsections(ancestorId, root, newPath).ajax()
+            .done(function(data){
+                $("#submenu-nav-1").hide();
+                $("#submenu-nav-2").hide();
+                $("#" + root).show();
+                $("#" + root).html(data);
+            });
+        }
+    }
+}
+
+$(function(){
+    $(document).ajaxStart(function(){
+    	if(!startedSpinner){
+		    $('.loader').fadeIn(100);
+    	}
+	}).ajaxStop(function(){
+	    $('.loader').fadeOut(50);
+	    startedSpinner = false;
+	});
+})

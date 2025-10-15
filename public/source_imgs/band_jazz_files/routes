@@ -1,0 +1,281 @@
+var jsRoutesFO = {}; (function(_root){
+var _nS = function(c,f,b){var e=c.split(f||"."),g=b||_root,d,a;for(d=0,a=e.length;d<a;d++){g=g[e[d]]=g[e[d]]||{}}return g}
+var _qS = function(items){var qs = ''; for(var i=0;i<items.length;i++) {if(items[i]) qs += (qs ? '&' : '') + items[i]}; return qs ? ('?' + qs) : ''}
+var _s = function(p,s){return p+((s===true||(s&&s.secure))?'s':'')+'://'}
+var _wA = function(r){return {ajax:function(c){c=c||{};c.url=r.url;c.type=r.method;return jQuery.ajax(c)}, method:r.method,type:r.method,url:r.url,absoluteURL: function(s){return _s('http',s)+'www.iscte-iul.pt'+r.url},webSocketURL: function(s){return _s('ws',s)+'www.iscte-iul.pt'+r.url}}}
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['getSubmenuNav1'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "getsubmenu-nav-1"})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['getSubmenuNav2'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "getsubmenu-nav-2"})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['getSubmenu'] = 
+        function(menuId0,root1,path2) {
+          return _wA({method:"GET", url:"/" + "getsubmenu/" + (function(k,v) {return v})("menuId", menuId0) + "/" + encodeURIComponent((function(k,v) {return v})("root", root1)) + "/" + encodeURIComponent((function(k,v) {return v})("path", path2))})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['getSubsections'] = 
+        function(sectionId0,root1,path2) {
+          return _wA({method:"GET", url:"/" + "getsubsections/" + (function(k,v) {return v})("sectionId", sectionId0) + "/" + encodeURIComponent((function(k,v) {return v})("root", root1)) + "/" + encodeURIComponent((function(k,v) {return v})("path", path2))})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['search'] = 
+        function(searchTerm0) {
+          return _wA({method:"GET", url:"/" + "search/" + encodeURIComponent((function(k,v) {return v})("searchTerm", searchTerm0))})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['searchMaximus'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "search"})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['searchAll'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "searchall"})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['searchPersons'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "searchpersons"})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['searchDocuments'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "searchdocuments"})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['hitIt'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "hitit"})
+        }
+      ;
+_nS('controllers.fo.NewsController'); _root['controllers']['fo']['NewsController']['news'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "news" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.EventController'); _root['controllers']['fo']['EventController']['events'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "events" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.CalendarController'); _root['controllers']['fo']['CalendarController']['calendar'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "calendars" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.CalendarController'); _root['controllers']['fo']['CalendarController']['calendarAggregator'] = 
+        function(page0,id1) {
+          return _wA({method:"GET", url:"/" + "calendars/aggregator/" + (function(k,v) {return v})("id", id1) + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.ExaminationController'); _root['controllers']['fo']['ExaminationController']['examinations'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "theses_defenses" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.NewsMediaController'); _root['controllers']['fo']['NewsMediaController']['newsMedia'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "media" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.NewsController'); _root['controllers']['fo']['NewsController']['newsPT'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "noticias" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.EventController'); _root['controllers']['fo']['EventController']['eventsPT'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "eventos" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.CalendarController'); _root['controllers']['fo']['CalendarController']['calendarPT'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "calendarios" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.CalendarController'); _root['controllers']['fo']['CalendarController']['calendarAggregatorPT'] = 
+        function(page0,id1) {
+          return _wA({method:"GET", url:"/" + "calendarios/agregador/" + (function(k,v) {return v})("id", id1) + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.ExaminationController'); _root['controllers']['fo']['ExaminationController']['examinationsPT'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "provas" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.NewsMediaController'); _root['controllers']['fo']['NewsMediaController']['newsMediaPT'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "media" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.ApplicationController'); _root['controllers']['ApplicationController']['agendaExamination'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "agenda/examination"})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['getStatisticData'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "course/statistic/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['comparisonPT'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "estudar/comparador"})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['comparison'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "study/comparison"})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['englishCurricularCourses'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "englishUCS" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['filterCourses'] = 
+        function(type0,typeOther1) {
+          return _wA({method:"GET", url:"/" + "study/filter" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("type", type0), (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("typeOther", typeOther1)])})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['filterMobilityUCs'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "mobility/ucs/filter" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['filterIsolatedUCs'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "isolated/ucs/filter" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.DivisionController'); _root['controllers']['fo']['DivisionController']['building'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "campus/building/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+_nS('controllers.fo.DivisionController'); _root['controllers']['fo']['DivisionController']['divisions'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "campus/divisions" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFile'] = 
+        function(path0) {
+          return _wA({method:"GET", url:"/" + "assets/files/" + (function(k,v) {return v})("path", path0)})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFilePortrait'] = 
+        function(path0) {
+          return _wA({method:"GET", url:"/" + "assets/portrait/files/" + (function(k,v) {return v})("path", path0)})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFileLandscape'] = 
+        function(path0) {
+          return _wA({method:"GET", url:"/" + "assets/landscape/files/" + (function(k,v) {return v})("path", path0)})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFileThumbnail'] = 
+        function(path0) {
+          return _wA({method:"GET", url:"/" + "assets/thumbnail/files/" + (function(k,v) {return v})("path", path0)})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFilePortraitById'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "assets/portrait/byId/files/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFileLandscapeById'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "assets/landscape/byId/files/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+_nS('controllers.FileController'); _root['controllers']['FileController']['renderAssetFileThumbnailById'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "assets/thumbnail/byId/files/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+_nS('controllers.fo.ThesisController'); _root['controllers']['fo']['ThesisController']['theses'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "theses" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.ThesisController'); _root['controllers']['fo']['ThesisController']['thesesPT'] = 
+        function(page0) {
+          return _wA({method:"GET", url:"/" + "teses" + _qS([(page0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page0))])})
+        }
+      ;
+_nS('controllers.fo.ThesisController'); _root['controllers']['fo']['ThesisController']['callRepository'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "thesisHit/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+_nS('controllers.fo.UtilsController'); _root['controllers']['fo']['UtilsController']['listing'] = 
+        function(listing0,sectionId1,page2) {
+          return _wA({method:"GET", url:"/" + "listing/" + (function(k,v) {return v})("listing", listing0) + "/" + (function(k,v) {return v})("sectionId", sectionId1) + _qS([(page2 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page2))])})
+        }
+      ;
+_nS('controllers.fo.UtilsController'); _root['controllers']['fo']['UtilsController']['listingPT'] = 
+        function(listing0,sectionId1,page2) {
+          return _wA({method:"GET", url:"/" + "listagem/" + (function(k,v) {return v})("listing", listing0) + "/" + (function(k,v) {return v})("sectionId", sectionId1) + _qS([(page2 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page2))])})
+        }
+      ;
+_nS('controllers.fo.MagazineController'); _root['controllers']['fo']['MagazineController']['magazineHome'] = 
+        function(edition0) {
+          return _wA({method:"GET", url:"/" + "entrecampus" + _qS([(edition0 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("edition", edition0))])})
+        }
+      ;
+_nS('controllers.fo.workUnitControllers.ibs.IBSController'); _root['controllers']['fo']['workUnitControllers']['ibs']['IBSController']['searchPaginated'] = 
+        function(query0,page1) {
+          return _wA({method:"GET", url:"/" + "fo/search/" + encodeURIComponent((function(k,v) {return v})("query", query0)) + _qS([(page1 == null ? null : (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("page", page1))])})
+        }
+      ;
+_nS('controllers.fo.workUnitControllers.ibs.IBSController'); _root['controllers']['fo']['workUnitControllers']['ibs']['IBSController']['getSubmenu'] = 
+        function(menuid0) {
+          return _wA({method:"GET", url:"/" + "submenuMobile/" + (function(k,v) {return v})("menuid", menuid0)})
+        }
+      ;
+_nS('controllers.fo.workUnitControllers.ibs.IBSController'); _root['controllers']['fo']['workUnitControllers']['ibs']['IBSController']['submitDegreeCommunication'] = 
+        function(id0) {
+          return _wA({method:"POST", url:"/" + "course/" + (function(k,v) {return v})("id", id0) + "/questions"})
+        }
+      ;
+_nS('controllers.fo.TrackingController'); _root['controllers']['fo']['TrackingController']['clickedOnFenixLoginLink'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "tracking/clickedOnFenixLoginLink"})
+        }
+      ;
+_nS('controllers.fo.TrackingController'); _root['controllers']['fo']['TrackingController']['clickedOnFenixCandidacyLink'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "tracking/clickedOnFenixCandidacyLink"})
+        }
+      ;
+_nS('controllers.fo.TrackingController'); _root['controllers']['fo']['TrackingController']['landedOnCandidacyPage'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "tracking/landedOnCandidacyPage"})
+        }
+      ;
+_nS('controllers.fo.UtilsController'); _root['controllers']['fo']['UtilsController']['isEligibleAnalyticsFileFormat'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "isEligibleAnalyticsFileFormat"})
+        }
+      ;
+_nS('controllers.fo.CommunicationController'); _root['controllers']['fo']['CommunicationController']['maybeOffensive'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "maybeOffensive"})
+        }
+      ;
+_nS('controllers.fo.CommunicationController'); _root['controllers']['fo']['CommunicationController']['getForm'] = 
+        function(doubt0,reset1) {
+          return _wA({method:"GET", url:"/" + "contact/getForm/" + encodeURIComponent((function(k,v){return !!v})("doubt", doubt0)) + _qS([(reset1 == null ? null : (function(k,v){return k+'='+(!!v)})("reset", reset1))])})
+        }
+      ;
+_nS('controllers.fo.CourseController'); _root['controllers']['fo']['CourseController']['getUCExtraInfo'] = 
+        function(id0) {
+          return _wA({method:"GET", url:"/" + "uc/getExtraInfo/" + (function(k,v) {return v})("id", id0)})
+        }
+      ;
+})(jsRoutesFO)

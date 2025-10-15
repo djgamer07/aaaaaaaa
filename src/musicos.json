@@ -1,0 +1,28 @@
+{
+  "musicos": [
+    {
+      "nome": "Gordon Sumner",
+      "dataintegracao": "06-09-2025",
+      "foto": "/source_imgs/sting.webp",
+      "instrumentosestilos": "Voz, baixo, rock, pop",
+      "descricao": "Sting é um cantor, compositor e músico britânico, conhecido por sua carreira solo de sucesso e por ser o vocalista da banda The Police.",
+      "youtubeUrl": "https://www.youtube.com/embed/KLVq0IAzh1A"
+    },
+    {
+      "nome": "Buddy Rich",
+      "dataintegracao": "15-03-2024", 
+      "foto": "/source_imgs/buddy.jpg",
+      "instrumentosestilos": "Bateria, jazz, big band",
+      "descricao": "Considerado por muitos como o baterista mais tecnicamente impressionante da história, Buddy Rich era conhecido pela velocidade, precisão e showmanship. Tocava tanto em big bands como em contextos mais pequenos. Apesar de também se aventurar noutros estilos, é lembrado sobretudo pelo jazz.",
+      "youtubeUrl": "https://www.youtube.com/embed/_ug_fes1fEI"
+    },
+    {
+      "nome": "Kamasi Washington",
+      "dataintegracao": "20-01-2024",
+      "foto": "/source_imgs/kamasi.jpg",
+      "instrumentosestilos": "Saxofone, ritmos latinos",
+      "descricao": "Saxofonista norte-americano que ganhou grande notoriedade nos últimos anos por unir o jazz a elementos de funk, soul, hip hop e música clássica. O seu álbum The Epic (2015) trouxe o jazz para novas audiências. Já colaborou com artistas como Kendrick Lamar e Thundercat.",
+      "youtubeUrl": "https://www.youtube.com/embed/DPnpEEj9siU"
+    }
+  ]
+}
